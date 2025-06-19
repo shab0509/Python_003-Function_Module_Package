@@ -1,0 +1,103 @@
+# Based on passing the values of arguments to formal parameters,
+# the argument or parameter passing mechanisms are classified into 5 types:
+
+# 1. Positional Parameters or Arguments
+# 2. Default Parameters or Arguments
+# 3. Keyword Parameters or Arguments
+# 4. Variable Length Parameters or Arguments
+# 5. keyword Variable Length Parameters or Arguments
+
+# 1. Positional Parameters or Arguments
+#Def : The number of arguments (Actual Parameter) must equal to the number of formal parameters.
+# Also recommends order of parqmeters for Higher Accuracy.
+# Python Programming by default follows Positional parameters.
+# For ex:
+
+#function Defintion
+def functionname(param1, param2, ..... param n)
+    --------------------------------------------
+    --------------------------------------------
+     
+
+#function Calling
+functionname(arg1, arg2, ..... arg n)
+
+# 2. Default Parameters or Arguments
+def functionname(param1, param2, ..... param n-1= val1,param n = val2 )
+    --------------------------------------------
+    --------------------------------------------
+
+
+# Here param n-1 and param n are "Default Parameter"
+# param1, param2, .....  are "Positional Parameter"
+# Rule : While using Default Parameter in the function definition,
+# they must be used in the last parameters
+# For ex :
+
+def circlearea(r,PI = 3.14):
+    ac = PI *r**2
+    print("Area of circle = {}".format(ac))
+
+circlearea(2.3)
+circlearea(4.2)
+
+#3. Keyword parameter or Arguments
+
+# In some circumstances, we know the function name and formal parameter names but we don't know the order of formal parameter
+# And in such condition to pass the data we must use the concept of Keyword Parameter or Arguments.
+# The implementation of Keyword Parameters or arguments says that all the formal parameter names used as arguments in function calls as keys.
+# For ex:
+
+    def functionname(param1, param2 ....... param n)
+    --------------------------------------------
+    --------------------------------------------
+
+#Functionn Calling
+    functionname(param n = val n, param 1 = val 1,......param n-1 = val n-1)
+# Here "param n = val n, param 1 = val 1, param n-1 = val n-1" are called keyword Arguments.
+
+
+#4. Variable Length Parameters or Arguments
+
+# To implement, Variable Length Parameter concept, We must define single functions definition
+# and takes a formal parameter preceded with a symbol called astrik( *param ) and the formal parameter
+# with astrik symbol is called Variable Length Parameters and whose purpose is to hold/stor any number
+# of values coming from similar function calls and whose type is <class,tuple>
+
+#Syntax
+ def functionname(list of formal parameter, *param):
+
+#Rule:
+# The *param must always be written at last part of function heading and it must be used only once
+# When we use Variable Length parameter and default parameter in the function heading, we use default
+# parameter at last and before we use variable length parameter in function calls, we should not use
+# default parameter as keyword argument coz variable number of values are treated as Positional Argument Values
+
+
+def findsum(name, *n, crs="PYTHON"):
+    print("-----------------------")
+    print("Person Name : {} and course: {} ".format(name,crs))
+    print("-----------------------")
+
+    s=0
+    for v in n:
+        print("\t{}".format(v))
+        s=s+v
+    else:
+        print("-----------------------")
+        print("\tSum ={} ".format(s))
+        print("\tAvg ={} ".format(s/len(n)))
+        print("-----------------------")
+findsum("Shabi",10 )
+findsum("Shabi",10,20)
+findsum("Shabi",10,20,30)
+findsum("Shabi",10,20,30,-10,12.4,crs="Java")
+
+
+
+
+
+
+
+
+

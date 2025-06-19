@@ -1,0 +1,19 @@
+Parameter and Arguments
+-----------------------------------------
+#Parameter
+# Parameter are always used in the Function Heading.
+Two types of parameters are there:
+1. Formal Parameter/Variables : It is used in the function heading and they are
+                                used for storing the input values coming from function calls.
+
+2. Formal Parameter/Variables : It is used in the function body and they are
+                                used for storing the temporary result.
+
+The value of formal and local parameter can be accessed within corresponding function definition
+but not in other context
+
+#Argument
+
+# Arguments are also variable used in Function Calls.
+# All the argument are treated as global variables
+
