@@ -1,0 +1,40 @@
+We Know Module Concept is used for reusing the code across the programs,
+provided the module must be present in same folder but not able to get code reusability
+across Folder/Drive/ENV/Networks.
+
+The packages are used for getting code reusability across Folder/Drive/ENV/Networks.
+
+Def : A package is a collection of modules.
+
+# Creating the Package:
+
+Step 1 : Create an Folder
+Step 2 : Define/Place an empty python file "__init__.py" in the folder to make the folder name as package.
+Step 3 : Define/Place an module(s) in the package(Folder Name)
+
+#Number of approaches to re-use the module in packages:
+1. By using system.path.append()
+2. By using PYTHONPATH Environmental Variable
+
+1. By using system.path.append()
+
+import sys
+sys.path.append("/Users/shabivictor/Shabi's Personal/GITHUB/Untitled/Python_003-Function_Module_Package/PackageS")
+from icici import simpleint
+simpleint()
+
+
+2. By using PYTHONPATH Environmental Variable
+
+PYTHONPATH is one of the keyword for OS, Hence it is called Environmental Variable
+To Set PYTHONPATH, follow the below steps:
+
+ a> Go to Start Button
+ b> Choose Settings
+ c> Choose System
+ d> Search for "Environmental Variable"
+ e> Choose New
+ f> Type PYTHONPATH for variable name
+ g> place absolute path of package as variable name
+ h>  Choose OK
+

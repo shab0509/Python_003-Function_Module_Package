@@ -1,0 +1,12 @@
+def aopmenu():
+    print("_" * 50)
+    print("Arithmetic Operations")
+    print("_" * 50)
+    print("\t\t1.Addition")
+    print("\t\t2.Substraction")
+    print("\t\t3.Multiplication")
+    print("\t\t4.Division")
+    print("\t\t5.Modulo Division")
+    print("\t\t6.Exponentiation")
+    print("\t\t7.Exit")
+    print("_" * 50)
