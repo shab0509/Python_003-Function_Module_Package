@@ -17,7 +17,7 @@
 def functionname(param1, param2, ..... param n)
     --------------------------------------------
     --------------------------------------------
-     
+
 
 #function Calling
 functionname(arg1, arg2, ..... arg n)
@@ -94,10 +94,108 @@ findsum("Shabi",10,20,30)
 findsum("Shabi",10,20,30,-10,12.4,crs="Java")
 
 
+#5. Keywords Variable Length Parameters or Arguments
+
+To implement, Keywords Variable Length Parameters or Arguments concept, we must define single Function Definition
+and takes a formal parameter preceded with a symbol is called "Double Astrik(**param)",
+and the formal parameter with double astrik symbol is called Keywords Variable Length Parameters, whose purpose is to
+hold any number of Keyword Variable Length values coming from similar function calls & whose type is <class, 'Dict'>
+
+#Syntax
+ def functionname(list of formal param, **param):
+                  -----------------------
+                  -----------------------
+#Rule
+The **param must always written at last part of function heading and it must be only one.
+
+--------------------------------------------------------------------------------------------
+#prg_001
+
+def showinfo(**val):
+    print("_"*40)
+    for k,v in val.items():
+        print("{} -- > {} ".format(k,v))
+    else:
+        print("_"*40)
+
+showinfo()
+showinfo(fno=10,fname='shabi',sub1='python',sub2='Shell')
+showinfo(name="Shabi Victor", Des= 'Data Engineer', Exp= '5+')
+
+#prg2
+
+def findtotal(rno,name,cls,**marks):
+    totm =0
+    print("_"*50)
+    print("Roll Number: {}".format(rno))
+    print("name : {} , class = {}".format(name,cls))
+    print("_"*50)
+
+    for sn,sm in marks.items():
+        print(" {} ----> {} ".format(sn,sm))
+        totm = totm + sm
+    else:
+        print("_"*50)
+        print("Total Marks = {}".format(totm))
+
+findtotal(10,"Aditya",cls= 'XII',sci=33,soc=86,math=32,eng=90)
+findtotal(11,"Bains",cls= 'XII',sci=33,soc=33,math=33,eng=33)
 
 
+#prg 3  : Example of Global Variable
 
+a=10
+def incrementval():
+    global a
+    a=a+1
+    print("Val of a after increment  = {} ".format(a))
 
+def updateval():
+    global a
+    a = a*2
+    print("Val of a after update  = {} ".format(a))
 
+print("Val of a in main prg before increment = {} ".format(a))
+incrementval()
+print("Val of a in main prg after increment = {} ".format(a))
+updateval()
+print("Val of a in main prg after update = {} ".format(a))
 
+#prg 4
+
+a=10
+b=20
+
+def disp():
+     print("OG value of a : {}".format(a))
+     print("OG value of b : {}".format(b))
+
+def swapper():
+    global a,b #Refering global values a,b
+    a=a^b
+    b=a^b
+    a=a^b
+    print("After Swappping, a:{},b:{}".format(a,b))
+
+#main prg
+print("OG Value a: {},b; {}".format(a,b))
+disp()
+swapper()
+
+#prg 5
+
+a=100
+b=200
+c=300
+
+def operation():
+    kvr = globals()
+    for k,v in kvr.items():
+        print(" {}  ---->  {}".format(k,v))
+    else:
+        print("Val of a = {}".format(kvr.get('a')))
+        print("Val of b = {}".format(kvr.get('b')))
+        print("Val of c = {}".format(kvr.get('c')))
+
+operation()
 

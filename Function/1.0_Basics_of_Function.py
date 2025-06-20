@@ -24,23 +24,6 @@ def functionname(list of formal Parameters):
 
 
 
-#PARAMETERS
-
-# parameter are always used in functions definition
-# We have 2 types of parameters :
-# Formal Parameters / Variables
-# Actual Parameters / Variables
-
-#Formal parameter are used in function heading and they are used
-# for storing input values coming from function call
-
-#Local Parameter used in the function body and they are used
-# for storing temporary result.
-
-
-#ARGUMENTS
-#Argument are also variables/parameter used in function call.
-
 def sumop(a,b):
     c=a+b
     print(a,b,c)
